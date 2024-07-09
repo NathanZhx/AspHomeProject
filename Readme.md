@@ -27,6 +27,34 @@ VALUES
 ('Kiwi', 'Tangy and sweet kiwi', 'A small and fuzzy kiwi, packed with vitamins and a unique flavor.', 19.99, 'https://picsum.photos/200/300?fruit=kiwi');
 GO
 
+INSERT INTO [comments] ([Name], [AvatarUrl], [Score], [Content])
+VALUES
+(1, 'https://randomuser.me/api/portraits/men/1.jpg', 5, 'Great product, highly recommend!'),
+(2, 'https://randomuser.me/api/portraits/women/2.jpg', 4, 'Good quality, but delivery was slow.'),
+(3, 'https://randomuser.me/api/portraits/men/3.jpg', 3, 'Average experience, nothing special.'),
+(4, 'https://randomuser.me/api/portraits/women/4.jpg', 2, 'Not very satisfied with the product.'),
+(5, 'https://randomuser.me/api/portraits/men/5.jpg', 1, 'Terrible experience, will not buy again.'),
+(6, 'https://randomuser.me/api/portraits/women/6.jpg', 5, 'Excellent customer service and fast delivery.'),
+(7, 'https://randomuser.me/api/portraits/men/7.jpg', 4, 'Product is good, but packaging could be better.'),
+(8, 'https://randomuser.me/api/portraits/women/8.jpg', 3, 'It is okay, met my expectations.'),
+(9, 'https://randomuser.me/api/portraits/men/9.jpg', 2, 'Product quality is not as described.'),
+(10, 'https://randomuser.me/api/portraits/women/10.jpg', 1, 'Very disappointed with the purchase.');
+
+INSERT INTO [carts] ([ProductId], [Quantity])
+VALUES
+(1, 2),
+(2, 1),
+(3, 5),
+(4, 3),
+(5, 4),
+(6, 2),
+(7, 1),
+(8, 6),
+(9, 2),
+(10, 3);
+GO
+
+
 ## 我电脑安装sqlserver包失败, 运行了下面命令解决了:
 dotnet remove package System.Windows.Extensions
 dotnet nuget locals all --clear
